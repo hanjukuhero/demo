@@ -1,4 +1,3 @@
-
 spring:
   profiles:
     active: local
@@ -23,24 +22,26 @@ spring:
     username: root
     password: mysql
 
-# MYBATIS PROPERTIES
-      mybatis-plus:
-        check-config-location: true
-        # 如果xml文件在类路径下则需要添加包名 classpath*:com/demo/mybatisplus/mapper/**/*.xml 且 pom.xml 在加上 resource 配置
-        # 如果xml文件在 resources 下则为 mapper/**/*.xml
-        mapper-locations: classpath*:mapper/**/*.xml
-        type-aliases-package: com.demo.mybatisplus.entity
-        configuration:
-          cache-enabled: true
-          lazy-loading-enabled: true
-          aggressive-lazy-loading: true
 
+
+
+# MYBATIS PROPERTIES
+mybatis-plus:
   global-config:
     db-config:
       # 全局主键自增策略
       id-type: auto
       # 全局表前缀配置
       table-prefix: "t_"
+  check-config-location: true
+  # 如果xml文件在类路径下则需要添加包名 classpath*:com/demo/mybatisplus/mapper/**/*.xml 且 pom.xml 在加上 resource 配置
+  # 如果xml文件在 resources 下则为 mapper/**/*.xml
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.demo.mybatisplus.entity
+  configuration:
+    cache-enabled: true
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: true
 
 logging:
   config: classpath:log4j2.xml
