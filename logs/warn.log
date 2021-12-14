@@ -1,0 +1,360 @@
+14:53:10.977 [main] ERROR org.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2438dcd] to prepare test instance [com.demo.mybatisplus.MpTest@7a55f148]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.demo.mybatisplus.MpTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.demo.mybatisplus.mapper.UserDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.demo.mybatisplus.mapper.UserDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.13.jar:5.3.13]
+	... 27 more
+15:18:30.931 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+15:18:30.933 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+15:22:00.420 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+15:22:00.423 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+15:24:25.211 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+15:24:25.213 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+15:26:42.200 [main] ERROR org.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f01783a] to prepare test instance [com.demo.mybatisplus.MpTest@68fe48d7]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.demo.mybatisplus.MpTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDao' is expected to be of type 'com.demo.mybatisplus.mapper.UserMapper' but was actually of type 'com.sun.proxy.$Proxy81'
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDao' is expected to be of type 'com.demo.mybatisplus.mapper.UserMapper' but was actually of type 'com.sun.proxy.$Proxy81'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.adaptBeanInstance(AbstractBeanFactory.java:417) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:398) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.13.jar:5.3.13]
+	... 27 more
+15:27:23.387 [main] ERROR org.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f01783a] to prepare test instance [com.demo.mybatisplus.MpTest@37ed010a]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.demo.mybatisplus.MpTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDao' is expected to be of type 'com.demo.mybatisplus.mapper.UserMapper' but was actually of type 'com.sun.proxy.$Proxy82'
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.13.jar:5.3.13]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDao' is expected to be of type 'com.demo.mybatisplus.mapper.UserMapper' but was actually of type 'com.sun.proxy.$Proxy82'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.adaptBeanInstance(AbstractBeanFactory.java:417) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:398) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.13.jar:5.3.13]
+	... 27 more
+16:00:23.345 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:00:23.348 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:00:23.401 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:00:23.402 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:00:23.402 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:128) [classes/:?]
+16:06:18.173 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:06:18.175 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:06:18.230 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:06:18.231 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:06:18.232 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:128) [classes/:?]
+16:06:26.704 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:06:26.707 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:06:50.259 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:06:50.262 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:07:01.382 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:128) [classes/:?]
+16:08:37.328 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:08:37.330 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:10:21.141 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:10:21.143 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:10:21.193 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:10:21.194 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:10:21.195 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:128) [classes/:?]
+16:10:46.393 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:10:46.395 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:10:46.448 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:10:46.449 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:10:46.450 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:128) [classes/:?]
+16:11:26.033 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:11:26.036 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:11:26.088 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:11:26.089 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:11:26.089 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:119) [classes/:?]
+16:12:52.489 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:12:52.493 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:12:52.594 [main] ERROR org.apache.velocity.parser - /templates/mapper.xml.ftl: Encountered "enableCache" at line 5, column 6.
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:12:52.595 [main] ERROR org.apache.velocity.loader - ResourceManager: parse exception: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+16:12:52.596 [main] ERROR com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine - 无法创建文件，请检查配置信息！
+org.apache.velocity.exception.ParseErrorException: Encountered "enableCache" at /templates/mapper.xml.ftl[line 5, column 6]
+Was expecting one of:
+    "(" ...
+    <WHITESPACE> ...
+    <NEWLINE> ...
+    
+	at org.apache.velocity.Template.process(Template.java:154) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:429) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:346) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1677) ~[velocity-engine-core-2.3.jar:2.3]
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:333) ~[velocity-engine-core-2.3.jar:2.3]
+	at com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine.writer(VelocityTemplateEngine.java:61) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.writerFile(AbstractTemplateEngine.java:137) ~[mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:106) [mybatis-plus-generator-3.4.1.jar:3.4.1]
+	at com.demo.mybatisplus.CodeGenerator.main(CodeGenerator.java:119) [classes/:?]
+16:13:23.153 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:13:23.155 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:15:09.702 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:15:09.705 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:17:45.687 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:17:45.689 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:21:13.789 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:21:13.791 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
+16:21:42.600 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.unicode' has been deprecated in favor of 'resource.loader.file.unicode'
+16:21:42.602 [main] WARN  org.apache.velocity.deprecation - configuration key 'file.resource.loader.class' has been deprecated in favor of 'resource.loader.file.class'
